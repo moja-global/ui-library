@@ -4,10 +4,15 @@
       href="#"
       class="dropbtn" 
     >
-      Dropdown
+      {{Heading}}
     </button>
     <div v-if="isVisible" ref="dropdown" class="dropdown-content">
-      <slot></slot> 
+      <a v-for="(item, index) in content" v-bind:key="index" 
+        :href="item.href"
+        @click="click"
+      >
+        {{item.option}} 
+      </a>
     </div>
   </div>
 </template>
@@ -15,8 +20,16 @@
 <script>
 import { ref } from 'vue';
 
+
+
 export default {
-  setup() {
+  props: {
+    Heading: String,
+    content: Array,
+    href: String,
+  },
+  setup(props) {
+    const url = ref(props.href)
     const isVisible = ref(true);
 
     function click () {
@@ -25,8 +38,9 @@ export default {
 
     return {
       isVisible,
+      url,
       click
-    }
+    } 
   } 
 };
 </script>
@@ -58,5 +72,19 @@ export default {
 } 
 .dropdown:hover .dropbtn {
   background-color: #2f382a;
+}
+
+a {
+  color: 	white;
+  padding: 12px 16px;
+  font-family: sans-serif;
+  text-decoration: none;
+  display: block;
+  background-color: #475447;
+} 
+
+a:hover {
+  background-color: white;
+  color: #2f382a;
 }
 </style>

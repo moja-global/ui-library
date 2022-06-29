@@ -1,24 +1,56 @@
 import DropdownHover from '../components/Dropdown/DropdownComponentHover.vue';
-import DropdownClick from '../components/Dropdown/DropdownComponentClick.vue';
-import DropdownItem from '../components/Dropdown/DropdownItem.vue';
+import DropdownClick from '../components/Dropdown/DropdownComponentClick.vue'; 
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
   title: 'Example/Dropdown',
-  component: DropdownHover,
-  // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
-  argTypes: {  
-  },
-};
- 
-const Template = (args) => ({ 
-  components: { DropdownClick, DropdownHover, DropdownItem }, 
+  components: { DropdownClick, DropdownHover } 
+}; 
+
+export const Hover = () => ({ 
+  components: { DropdownHover },
   setup() {
-    return { args };
-  }   
-});
+    const content=[{
+      option: "Option One",
+      href: "/1"
+    },
+    {
+      option: "Option Two",
+      href: "/2"
+    },
+    {
+      option: "Option Three",
+      href: "/3"
+    }
+    ]
 
-export const Hover = () => <DropdownHover><DropdownItem content="Option One" href="/1"/> <DropdownItem content="Option Two" href="/2"/> <DropdownItem content="Option Three" href="/3"/> <DropdownItem content="Option Four" href="/4"/> </DropdownHover> 
+    return {
+      content
+    }
+  },
+  template: '<DropdownHover v-bind:content="content" Heading="Dropdown"></DropdownHover> ', 
+}) 
 
-export const Click = () => <DropdownClick><DropdownItem content="Option One" href="/1"/> <DropdownItem content="Option Two" href="/2"/> <DropdownItem content="Option Three" href="/3"/> <DropdownItem content="Option Four" href="/4"/> </DropdownClick> 
- 
+export const Click = ( ) => ({ 
+  components: { DropdownClick },
+  setup() {
+    const content=[{
+      option: "Option One",
+      href: "/1"
+    },
+    {
+      option: "Option Two",
+      href: "/2"
+    },
+    {
+      option: "Option Three",
+      href: "/3"
+    }
+    ]
+
+    return {
+      content
+    }
+  },
+  template: '<DropdownClick v-bind:content="content" Heading="Dropdown"></DropdownClick> ', 
+}) 
