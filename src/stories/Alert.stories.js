@@ -1,82 +1,117 @@
-import { app } from '@storybook/vue3';
-import store  from '../store/store'
+import { app } from "@storybook/vue3";
+import store from "../store/store";
+import ToastComponent from "../components/Alert/Toast.vue";
+import { useToast } from "../components/Alert/Alert.js";
 
-app.use(store);
-
-import ToastComponent from '../components/Alert/Toast.vue';
-import { useToast } from '../components/Alert/Alert.js';
+app.use( store );
 
 export default {
-    title: 'alert',
-    component: ToastComponent,
-    argTypes: {
-        set: { type:'object' },
-    },
+  title: "alert",
+  component: ToastComponent
 };
 
-const Template = (args) => ({
+
+export const SolidSuccess = ( args ) => ( {
     components: { ToastComponent },
-    beforeMount() {
-        useToast(args.set);
-        console.log(this.$store)
+    argType: {
+        type: {
+            control: { type: 'select' },
+            options: [ 'success','error','info','primary','gradient'],
+        },
+        title: { type: 'string' },
+        message: { type: 'string' },
+        time: { type: 'number' },
+        varient: { type: 'string' }
     },
-    setup() {
+    setup()
+    {
         return { useToast,args };
     },
-    template: '<ToastComponent/>',
+    template: `<div><button @click='useToast(args)'>Solid Success</button><ToastComponent/></div>`,
+} );
+
+SolidSuccess.args = { type: "success",title: "Solid Success",message: "message",time: 5000,varient: "solid" }
+
+export const Success = () => ({
+   components: { ToastComponent },
+  
+  setup() {
+    return { useToast };
+  },
+    template: `<div><button @click='useToast({ type: "success",title: "Success",message: "message",time: 5000 })'>Success</button><ToastComponent/></div>`,
+} );
+
+
+
+export const Error = () => ({
+  components: { ToastComponent },
+  setup() {
+    return { useToast };
+  },
+  template: `<div><button @click='useToast({ type: "error", title: "Error", message: "message", time: 5000 })'>Error</button><ToastComponent/></div>`,
+});
+
+export const Info = () => ({
+  components: { ToastComponent },
+  setup() {
+    return { useToast };
+  },
+  template: `<div><button @click='useToast({ type: "info", title: "Info", message: "message", time: 5000 })'>Info</button><ToastComponent/></div>`,
 });
 
 
-export const Success = Template.bind({});
-export const Error = Template.bind({});
-export const Info = Template.bind({});
-export const SolidSuccess = Template.bind({});
-export const SolidError= Template.bind({});
-export const SolidInfo = Template.bind({});
-export const SolidPrimary = Template.bind({});
-export const SolidGradient = Template.bind({});
-export const SolidWarning = Template.bind({});
-export const Warning = Template.bind({});
+export const SolidError = () => ({
+  components: { ToastComponent },
+  setup() {
+    return { useToast };
+  },
+  template: `<div><button @click='useToast({ type: "error", title: "Solid Error", message: "message", time: 5000, varient: "solid" })'>Solid Error</button><ToastComponent/></div>`,
+});
 
+export const SolidInfo = () => ({
+  components: { ToastComponent },
+  setup() {
+    return { useToast };
+  },
+  template: `<div><button @click='useToast({ type: "info", title: "Solid Info", message: "message", time: 5000, varient: "solid" })'>Solid Info</button><ToastComponent/></div>`,
+});
 
-Success.args = {
-    set:{ type:"success", title:"Success", message:"message", time:5000}
-};
+export const SolidPrimary = () => ({
+  components: { ToastComponent },
+  setup() {
+    return { useToast };
+  },
+  template: `<div><button @click='useToast({ type: "primary", title: "Solid Primary", message: "message", time: 5000, varient: "solid" })'>Solid Primary</button><ToastComponent/></div>`,
+});
 
-Error.args = {
-    set: { type: "error", title: "Error", message: "message", time: 5000 }
-};
+export const SolidGradient = () => ({
+  components: { ToastComponent },
+  setup() {
+    return { useToast };
+  },
+  template: `<div><button @click='useToast({ type: "gradient", title: "Solid Gradient", message: "message", time: 5000, varient: "solid" })'>Solid Gradient</button><ToastComponent/></div>`,
+});
 
-Info.args = {
-    set: { type: "info", title: "Info", message: "message", time: 5000 }
-};
+export const SolidWarning = () => ({
+  components: { ToastComponent },
+  setup() {
+    return { useToast };
+  },
+  template: `<div><button @click='useToast({ type: "warning", title: "Solid Warning", message: "message", time: 5000, varient: "solid" })'>Solid Warning</button><ToastComponent/></div>`,
+});
 
-SolidSuccess.args = {
-    set: { type: "success", title: "Solid Success", message: "message", time: 5000, varient: "solid" }
-};
+export const Warning = () => ({
+  components: { ToastComponent },
+  setup() {
+    return { useToast };
+  },
+  template: `<div><button @click='useToast({ type: "warning", title: "Solid Warning", message: "message", time: 5000, varient: "solid" })'>Warning</button><ToastComponent/></div>`,
+});
 
-SolidError.args = {
-    set: { type: "error", title: "Solid Error", message: "message", time: 5000, varient: "solid" }
-};
-
-SolidInfo.args = {
-    set: { type: "info", title: "Solid Info", message: "message", time: 5000, varient: "solid" }
-};
-
-SolidPrimary.args = {
-    set: { type: "primary", title: "Solid Primary", message: "message", time: 5000, varient: "solid" }
-};
-
-SolidGradient.args = {
-    set: { type: "gradient", title: "Solid Gradient", message: "message", time: 5000, varient: "solid" }
-};
-
-Warning.args = {
-    set: { type: "warning", title: "Warning", message: "message", time: 5000 }
-};
-
-SolidWarning.args = {
-    set: { type: "warning", title: "Solid Warning", message: "message", time: 5000, varient: "solid" }
-};
-
-
+export const WithoutTitle = () => ({
+  components: { ToastComponent },
+  setup() {
+    return { useToast };
+  },
+  template: `<div><button @click='useToast({ type: "success",  message: "message", time: 500000, varient: "solid" })'>Solid Success</button><ToastComponent/></div>`,
+});
