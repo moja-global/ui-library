@@ -29,7 +29,7 @@ export const Hover = () => ({
     };
   },
   template:
-    '<Dropdown v-bind:content="content" Heading="Dropdown" :isClickable="false"></Dropdown>',
+    '<Dropdown v-bind:content="content" Heading="Dropdown" trigger="hover"></Dropdown>',
 });
 
 export const Click = () => ({
@@ -55,5 +55,5 @@ export const Click = () => ({
     };
   },
   template:
-    '<Dropdown v-bind:content="content" Heading="Dropdown" :isClickable="true"></Dropdown>',
+    '<Dropdown v-bind:content="content" Heading="Dropdown" trigger="click"></Dropdown>',
 });

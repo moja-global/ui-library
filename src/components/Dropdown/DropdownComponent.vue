@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isClickable" class="dropdownclick" v-click-away="closedropdown">
+  <div v-if="isClickTrigger" class="dropdownclick" v-click-away="closedropdown">
     <button href="#" class="dropbtnclick" @click="toggleVisibility">
       {{ Heading }}
     </button>
@@ -40,18 +40,17 @@ export default {
     Heading: String,
     content: Array,
     href: String,
-    isClickable: Boolean,
+    trigger: String,
   },
   setup(props) {
     const isVisible = ref(true);
     const isActive = ref("isActive");
     const dropdowncontent = ref("dropdown-content");
-    const isClickable = ref(props.isClickable);
+    const isClickTrigger = ref(props.trigger === "click");
 
     function toggleVisibility() {
       isVisible.value = !isVisible.value;
       console.log(isVisible.value);
-      console.log("isClickable", isClickable.value);
     }
     function closedropdown() {
       isVisible.value = false;
@@ -71,6 +70,7 @@ export default {
       toggleVisibility,
       click,
       closedropdown,
+      isClickTrigger,
     };
   },
 };
