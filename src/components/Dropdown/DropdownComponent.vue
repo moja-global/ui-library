@@ -41,6 +41,35 @@ export default {
     content: Array,
     href: String,
     trigger: String,
+    color: {
+      type: String,
+      default: "#f9f9f9",
+    },
+    Bgheading: {
+      type: String,
+      default: "#2f382a",
+    },
+    Bgcontent: {
+      type: String,
+      default: "#475447",
+    },
+    wdcontent: {
+      type: String,
+      default: "160px",
+    },
+    pdheading: {
+      type: String,
+      default: "16px",
+    },
+    fsheading: {
+      type: String,
+      default: "16px",
+    },
+    pdoption: {
+      type: String,
+      default: "12px 16px",
+    },
+    fsoption: String,
   },
   setup(props) {
     const isVisible = ref(true);
@@ -79,33 +108,33 @@ export default {
 <style scoped>
 .dropbtn,
 .dropbtnclick {
-  background-color: #2f382a;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
+  background-color: v-bind(Bgheading);
+  color: v-bind(color);
+  padding: v-bind(pdheading);
+  font-size: v-bind(fsheading);
   border: none;
   cursor: pointer;
 }
 .dropdown,
 .dropdownclick {
-  background-color: #2f382a;
+  background-color: v-bind(Bgheading);
   position: relative;
   display: inline-block;
 }
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px #475447;
+  background-color: v-bind(color);
+  min-width: v-bind(wdcontent);
+  box-shadow: 0px 8px 16px 0px v-bind(Bgcontent);
   z-index: 1;
 }
 .dropdown-contentclick,
 .isActive {
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px #475447;
+  background-color: v-bind(color);
+  min-width: v-bind(wdcontent);
+  box-shadow: 0px 8px 16px 0px v-bind(Bgcontent);
   z-index: 1;
 }
 
@@ -120,20 +149,21 @@ export default {
   display: block;
 }
 .dropdown:hover .dropbtn {
-  background-color: #2f382a;
+  background-color: v-bind(Bgheading);
 }
 
 a {
-  color: white;
-  padding: 12px 16px;
+  color: v-bind(color);
+  padding: v-bind(pdoption);
+  font-size: v-bind(fsoption);
   font-family: sans-serif;
   text-decoration: none;
   display: block;
-  background-color: #475447;
+  background-color: v-bind(Bgcontent);
 }
 
 a:hover {
-  background-color: white;
-  color: #2f382a;
+  background-color: v-bind(color);
+  color: v-bind(Bgheading);
 }
 </style>
