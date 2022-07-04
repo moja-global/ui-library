@@ -10,7 +10,6 @@ export default {
   component: ToastComponent
 };
 
-
 export const SolidSuccess = ( args ) => ( {
     components: { ToastComponent },
     argType: {
@@ -40,8 +39,6 @@ export const Success = () => ({
   },
     template: `<div><button @click='useToast({ type: "success",title: "Success",message: "message",time: 5000 })'>Success</button><ToastComponent/></div>`,
 } );
-
-
 
 export const Error = () => ({
   components: { ToastComponent },

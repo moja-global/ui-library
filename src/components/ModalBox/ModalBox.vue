@@ -26,7 +26,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content:center
     }
+
+    
 
     .box-alert-mask {
         position: fixed;
@@ -36,7 +39,6 @@
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
-        display: table;
         transition: opacity 0.3s ease;
     }
 </style>
