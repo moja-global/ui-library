@@ -39,7 +39,7 @@
         </div>
       </div>
       <div
-        v-for="(item, index) in insidecontent"
+        v-for="(item, index) in insideContent"
         v-bind:key="index"
         class="innerright"
         :id="item.id"
@@ -55,37 +55,44 @@ import { ref } from "vue";
 
 export default {
   props: {
-    content: Array,
-    Primary: String,
-    insidecontent: Array,
-    Color: {
+    content: {
+      type: Array,
+      required: true,
+    },
+    isPrimary: {
+      type: Boolean,
+      required: true,
+    },
+    insideContent: {
+      type: Array,
+      required: true,
+    },
+    color: {
       type: String,
       default: "#2e382b",
     },
-    BackgroundColor: {
+    backgroundColor: {
       type: String,
       default: "#e3f2e8",
     },
-    AvatarHeight: {
+    avatarHeight: {
       type: String,
       default: "50px",
     },
-    AvatarWidth: {
+    avatarWidth: {
       type: String,
       default: "auto",
     },
-    Border: {
+    border: {
       type: String,
       default: "1px solid #67ca8f",
     },
-    InnerBgColor: {
+    innerbgColor: {
       type: String,
       default: "#cce8f2",
     },
   },
-  setup(props) {
-    const isPrimary = ref(props.Primary === "true");
-
+  setup() {
     function div_show(id) {
       const elements = document.getElementsByClassName("innerright");
       for (let i = 0; i < elements.length; i++) {
@@ -107,7 +114,6 @@ export default {
     }
 
     return {
-      isPrimary,
       div_show,
       closesection,
     };
@@ -119,8 +125,8 @@ export default {
 .sponsors {
   padding: 3rem 1rem;
   text-align: center;
-  background-color: v-bind(BackgroundColor);
-  color: v-bind(Color);
+  background-color: v-bind(backgroundColor);
+  color: v-bind(color);
 }
 .sponsorsheading {
   font-size: 200%;
@@ -139,14 +145,14 @@ export default {
 }
 .innerleft,
 .innerright {
-  background-color: v-bind(InnerBgColor);
+  background-color: v-bind(innerbgColor);
 }
 .innerright {
   display: none;
 }
 .sponsor_wrapper {
   margin: 17px;
-  border: v-bind(Border);
+  border: v-bind(border);
   border-radius: 5px;
   box-shadow: 0 5px 15px rgb(0 0 0 / 55%);
   display: flex;
@@ -154,8 +160,8 @@ export default {
 }
 
 .sponsor_avatar {
-  width: v-bind(AvatarWidth);
-  height: v-bind(AvatarHeight);
+  width: v-bind(avatarWidth);
+  height: v-bind(avatarHeight);
   border-radius: 5px;
 }
 .outercontent {

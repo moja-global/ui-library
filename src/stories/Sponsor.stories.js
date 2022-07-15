@@ -37,7 +37,7 @@ export const Primary = () => ({
     };
   },
   template:
-    '<Sponsors v-bind:content="content" v-bind:insidecontent="insidecontent" Primary="true" ></Sponsors>',
+    '<Sponsors v-bind:content="content" v-bind:insideContent="insideContent" :isPrimary="true" ></Sponsors>',
 });
 
 export const Secondary = () => ({
@@ -66,7 +66,7 @@ export const Secondary = () => ({
       },
     ];
 
-    const insidecontent = [
+    const insideContent = [
       {
         id: "1",
         html: "<h1 style='padding:6px'> The Linux Foundation </h1> <p style='color: white; padding: 1rem 1rem; color: #2E382B'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam dolorem dolorum modi ipsam. Nihil, hic. Esse assumenda explicabo cumque libero quasi pariatur perspiciatis nisi nemo labore facilis! Similique doloremque, praesentium consequatur labore, laboriosam culpa vero voluptas ipsum at provident fugiat. 2 </p> <button  style='margin-bottom:6px'>Check More</button>",
@@ -90,9 +90,9 @@ export const Secondary = () => ({
 
     return {
       content,
-      insidecontent,
+      insideContent,
     };
   },
   template:
-    '<Sponsors v-bind:content="content" v-bind:insidecontent="insidecontent" Primary="false" ></Sponsors>',
+    '<Sponsors v-bind:content="content" v-bind:insideContent="insideContent" :isPrimary="false" ></Sponsors>',
 });
