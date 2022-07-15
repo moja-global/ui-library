@@ -1,6 +1,6 @@
 <template>
   <div :class="[toggle ? isActive : '']" @click="accordionhandler($event)">
-    <div :class="[label, 'label_box']">{{ Heading }}</div>
+    <div :class="[label, 'label_box']">{{ heading }}</div>
     <div :class="content" class="content">
       <slot></slot>
     </div>
@@ -12,34 +12,34 @@ import { ref } from "vue";
 export default {
   name: "AccordionItem",
   props: {
-    Heading: String,
+    heading: String,
     label: String,
     content: String,
-    fscontent: {
+    fsContent: {
       type: String,
       default: "1.4vw",
     },
-    fsheading: {
+    fsHeading: {
       type: String,
       default: "2vw",
     },
-    Bgheading: {
+    bgHeading: {
       type: String,
       default: "#2e382b",
     },
-    headingcolor: {
+    headingColor: {
       type: String,
       default: "#ffffff",
     },
-    Bgcontent: {
+    bgContent: {
       type: String,
       default: "#475447",
     },
-    contentcolor: {
+    contentColor: {
       type: String,
       default: "#f7f5f7",
     },
-    bordercolor: {
+    borderColor: {
       type: String,
       default: "#475447",
     },
@@ -71,125 +71,85 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .label_secondary {
-  font-size: v-bind(fsheading);
+  font-size: v-bind(fsHeading);
   font-family: sans-serif;
-  background-color: v-bind(Bgheading);
+  background-color: v-bind(bgHeading);
   padding: 1%;
   padding-left: 2%;
-  color: v-bind(headingcolor);
-  border: 1px solid v-bind(bordercolor);
+  color: v-bind(headingColor);
+  border: 1px solid v-bind(borderColor);
 }
 
-.content_secondary {
-  background-color: v-bind(Bgcontent);
+.content_secondary,
+.content_secondary_dark {
+  background-color: v-bind(bgContent);
 }
 
 .content_secondary_dark {
-  background-color: v-bind(Bgcontent);
-  color: v-bind(contentcolor);
+  color: v-bind(contentColor);
 }
 
 .label_secondary::before {
   content: "+";
   float: right;
-  color: v-bind(headingcolor);
+  color: v-bind(headingColor);
   padding-right: 1%;
 }
 
 .active .label_secondary::before {
   content: "-";
-  float: right;
-  color: v-bind(headingcolor);
-  padding-right: 1%;
 }
 
-.active .content_secondary {
-  background-color: v-bind(Bgcontent);
+.active .content_secondary,
+.active .content_secondary_dark {
+  background-color: v-bind(bgContent);
 }
 
 .active .content_secondary_dark {
-  background-color: v-bind(Bgcontent);
-  color: v-bind(contentcolor);
+  color: v-bind(contentColor);
 }
 
-.label_primary {
-  font-size: v-bind(fsheading);
-  font-family: sans-serif;
-
-  background-color: #ffffff;
-  padding: 1%;
-  color: v-bind(headingcolor);
-  border-bottom: 1px solid v-bind(bordercolor);
-}
-
+.label_primary,
 .label_primary_dark {
-  font-size: v-bind(fsheading);
+  font-size: v-bind(fsHeading);
   font-family: sans-serif;
 
+  background-color: v-bind(bgHeading);
   padding: 1%;
-  background-color: v-bind(Bgheading);
-  color: v-bind(headingcolor);
-  border-bottom: 1px solid v-bind(bordercolor);
+  color: v-bind(headingColor);
+  border-bottom: 1px solid v-bind(borderColor);
 }
 
 .content_primary {
-  background-color: v-bind(Bgcontent);
+  background-color: v-bind(bgContent);
 }
 
 .content_primary_dark {
-  background-color: v-bind(Bgheading);
-  color: v-bind(contentcolor);
+  background-color: v-bind(bgHeading);
+  color: v-bind(contentColor);
 }
 
-.label_primary::before {
-  content: "+";
-  float: left;
-  color: v-bind(headingcolor);
-  padding-left: 1%;
-
-  border-radius: 50%;
-  margin-right: 2%;
-  width: 10px;
-}
-
+.label_primary::before,
 .label_primary_dark::before {
   content: "+";
   float: left;
-  color: v-bind(headingcolor);
-  padding-left: 1%;
-
   border-radius: 50%;
   margin-right: 2%;
   width: 10px;
 }
 
-.active .label_primary::before {
-  content: "-";
-  float: left;
-  color: v-bind(headingcolor);
-  padding-left: 1%;
-  border-radius: 50%;
-  margin-right: 2%;
-  width: 10px;
-}
-
+.active .label_primary::before,
 .active .label_primary_dark::before {
   content: "-";
-  float: left;
-  color: v-bind(headingcolor);
-  padding-left: 1%;
-  border-radius: 50%;
-  margin-right: 2%;
-  width: 10px;
 }
 
 .active .content_primary {
-  background-color: v-bind(Bgcontent);
+  background-color: v-bind(bgContent);
 }
 
 .active .content_primary_dark {
-  background-color: v-bind(Bgheading);
-  color: v-bind(contentcolor);
+  background-color: v-bind(bgHeading);
+  color: v-bind(contentColor);
 }
 
 .content {
@@ -197,7 +157,7 @@ export default {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease-out;
-  font-size: v-bind(fscontent);
+  font-size: v-bind(fsContent);
   font-family: sans-serif;
 }
 

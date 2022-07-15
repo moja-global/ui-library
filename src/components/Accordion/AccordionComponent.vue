@@ -1,5 +1,5 @@
 <template>
-  <div :class="[centeritem ? 'center' : ' ', 'container']">
+  <div :class="[centerItem ? 'center' : ' ', 'container']">
     <slot></slot>
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
       type: String,
       default: "80vw",
     },
-    centeritem: {
+    centerItem: {
       type: Boolean,
       default: "true",
     },
