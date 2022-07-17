@@ -15,7 +15,7 @@ export const PrimaryRound = () => ({
 export const PrimarySquare = () => ({
   components: { ToggleComponent },
   template:
-    '  <ToggleComponent classname="primary" OuterWidth="60px" OuterHeight="34px" InnerWidth="26px" InnerHeight="26px" InnerColor="#ffffff" OuterColor="#2E382B"/>',
+    '  <ToggleComponent classname="primary" OuterWidth="60px" OuterHeight="34px" InnerWidth="26px" InnerHeight="26px" InnerColor="#ffffff" OuterColor="#73e8a3"/>',
 });
 
 export const SecondaryRound = () => ({
@@ -27,5 +27,5 @@ export const SecondaryRound = () => ({
 export const SecondarySquare = () => ({
   components: { ToggleComponent },
   template:
-    '  <ToggleComponent classname="secondary" OuterWidth="60px" OuterHeight="34px" InnerWidth="26px" InnerHeight="26px" InnerColor="#2E382B" OuterColor="#ffffff"/>',
+    '  <ToggleComponent classname="secondary" OuterWidth="60px" OuterHeight="34px" InnerWidth="26px" InnerHeight="26px" InnerColor="#73e8a3" OuterColor="#ffffff"/>',
 });
