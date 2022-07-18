@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="navbar">
-      <a class="brandlogo" :href="imghref">
-        <img :src="imagesrc" :alt="imagealt" />
+      <a class="brandlogo" :href="imageHref">
+        <img :src="imageSrc" :alt="imageAlt" />
       </a>
       <div class="content">
         <ul class="innercontent">
@@ -12,8 +12,8 @@
     </div>
   </div>
   <div class="navbar-mobile">
-    <a class="brandlogo" :href="imghref">
-      <img :src="imagesrc" :alt="imagealt" />
+    <a class="brandlogo" :href="imageHref">
+      <img :src="imageSrc" :alt="imageAlt" />
     </a>
     <span v-if="!showMenu" type="menu" @click="toggleNavbar()" class="icon">
       <svg
@@ -60,14 +60,14 @@ import { ref } from "vue";
 export default {
   name: "Navbar",
   props: {
-    imagesrc: String,
-    imagealt: String,
-    imghref: String,
+    imageSrc: String,
+    imageAlt: String,
+    imageHref: String,
     color: {
       type: String,
       default: "white",
     },
-    Bgcolor: {
+    bgColor: {
       type: String,
       default: "#2e382b",
     },
@@ -75,11 +75,11 @@ export default {
       type: String,
       default: "1.1rem",
     },
-    imgheight: {
+    imgHeight: {
       type: String,
       default: "auto",
     },
-    imgwidth: {
+    imgWidth: {
       type: String,
       default: "60px",
     },
@@ -103,7 +103,7 @@ export default {
   justify-content: space-between;
   padding: 0.8rem;
   font-size: v-bind(fontSize);
-  background-color: v-bind(Bgcolor);
+  background-color: v-bind(bgColor);
   color: v-bind(color);
   width: 100%;
   margin: 0%;
@@ -132,8 +132,8 @@ a {
   text-decoration: none;
 }
 .brandlogo img {
-  height: v-bind(imgheight);
-  width: v-bind(imgwidth);
+  height: v-bind(imgHeight);
+  width: v-bind(imgWidth);
 }
 .innercontent:deep(li a:hover) {
   border-bottom: solid 2px white;
@@ -150,7 +150,7 @@ a {
   transition: 1s linear;
   position: relative;
   font-size: v-bind(fontSize);
-  background-color: v-bind(Bgcolor);
+  background-color: v-bind(bgColor);
   color: v-bind(color);
   width: 100%;
   z-index: -1;
