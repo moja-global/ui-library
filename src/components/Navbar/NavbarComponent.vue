@@ -135,8 +135,10 @@ a {
   height: v-bind(imgHeight);
   width: v-bind(imgWidth);
 }
-.innercontent:deep(li a:hover) {
+.innercontent:deep(li a:hover),
+.innercontent_mobile:deep(li a:hover) {
   border-bottom: solid 2px white;
+  cursor: pointer;
 }
 .content {
   display: flex;
@@ -144,19 +146,16 @@ a {
   padding: 0px 34px;
 }
 .content_mobile {
-  top: -1000px;
-  display: flex;
-  flex-direction: column;
-  transition: 1s linear;
-  position: relative;
+  display: none;
   font-size: v-bind(fontSize);
   background-color: v-bind(bgColor);
   color: v-bind(color);
   width: 100%;
+  transition: 2s;
   z-index: -1;
 }
 .show {
-  top: 0px;
+  display: none;
 }
 .innercontent,
 .innercontent_mobile {
@@ -190,6 +189,12 @@ a {
   }
   .navbar-mobile {
     display: block;
+  }
+  .show {
+    display: flex;
+    flex-direction: column;
+    left: 0px;
+    transition: 2s;
   }
 }
 </style>
