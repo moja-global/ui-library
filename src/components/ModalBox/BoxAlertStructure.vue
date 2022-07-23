@@ -1,11 +1,3 @@
-<!--<template>
-    <div class="box-alert-wrapper">
-        <CardComponent classname="box-alert-container">
-            <slot></slot>
-        </CardComponent>
-
-        import CardComponent from '../Card/card.vue';-->
-
 <template>
     <div class="box-alert-wrapper" @click="dismissAlert(alert.id)">
         <CardComponent classname="box-alert-container">
