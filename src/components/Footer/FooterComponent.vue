@@ -196,6 +196,11 @@ a {
   text-decoration: none;
   font-weight: lighter;
 }
+
+a:hover {
+  color: v-bind(titlefontColor);
+}
+
 .socialicons {
   display: flex;
   flex-wrap: wrap;
@@ -254,6 +259,11 @@ socialmediasecondary li {
   .logo {
     width: 44%;
     margin: 1rem;
+  }
+}
+@media screen and (max-width: 716px) {
+  .title {
+    text-align: center;
   }
 }
 @media screen and (max-width: 425px) {
