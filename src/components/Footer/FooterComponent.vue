@@ -218,7 +218,7 @@ a:hover {
 }
 .socialmedia li,
 socialmediasecondary li {
-  margin: 5px;
+  margin-right: 5px;
   list-style: none;
 }
 .socialmediasecondary {
