@@ -125,7 +125,7 @@ export default {
 }
 
 .content_primary_dark {
-  background-color: v-bind(bgHeading);
+  background-color: v-bind(bgContent);
   color: v-bind(contentColor);
 }
 
@@ -148,7 +148,7 @@ export default {
 }
 
 .active .content_primary_dark {
-  background-color: v-bind(bgHeading);
+  background-color: v-bind(bgContent);
   color: v-bind(contentColor);
 }
 
