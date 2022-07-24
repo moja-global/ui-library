@@ -1,6 +1,8 @@
 <template>
-  <div :class="[toggle ? isActive : '']" @click="accordionhandler($event)">
-    <div :class="[label, 'label_box']">{{ heading }}</div>
+  <div :class="[toggle ? isActive : '']">
+    <div :class="[label, 'label_box']" @click="accordionhandler($event)">
+      {{ heading }}
+    </div>
     <div :class="content" class="content">
       <slot></slot>
     </div>
