@@ -11,9 +11,10 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13", 
-    "vuex": "^4.0.2", 
-    "vue3-click-away": "^1.2.4" 
+    "vue": "^3.2.13",
+    "vue-sfc-rollup": "^4.1.2",
+    "vue3-click-away": "^1.2.4",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

@@ -1,4 +1,4 @@
-import FloatingButton from "../components/Button/FloatingButton.vue";
+import FloatingButton from "../../mojaglobal-ui/src/components/Button/FloatingButton.vue";
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {

@@ -51,9 +51,9 @@
 </template>
 
 <script>
-import { ref } from "vue";
-
 export default {
+  name: "SponsorsComponent",
+
   props: {
     content: {
       type: Array,

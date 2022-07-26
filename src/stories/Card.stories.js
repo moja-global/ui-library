@@ -1,4 +1,4 @@
-import CardComponent from "../components/Card/Card.vue";
+import CardComponent from "../../mojaglobal-ui/src/components/Card/Card.vue";
 
 export default {
   title: "Example/Card",
