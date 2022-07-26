@@ -1,6 +1,6 @@
 {
   "name": "mojaglobal-ui",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/mojaglobal-ui.ssr.js",
   "browser": "dist/mojaglobal-ui.esm.js",
@@ -51,6 +51,6 @@
     "node": ">=12"
   },
   "dependencies": {
-    "@rollup/plugin-image": "^2.0.4"
+    "@rollup/plugin-image": "^2.1.1"
   }
 }
