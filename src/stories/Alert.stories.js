@@ -1,7 +1,7 @@
 import { app } from "@storybook/vue3";
-import store from "../store/store";
-import ToastComponent from "../components/Alert/Toast.vue";
-import { useToast } from "../components/Alert/Alert.js";
+import store from "../../mojaglobal-ui/src/components/store/store";
+import ToastComponent from "../../mojaglobal-ui/src/components/Alert/Toast.vue";
+import { useToast } from "../../mojaglobal-ui/src/components/Alert/Alert.js";
 
 app.use(store);
 

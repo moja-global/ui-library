@@ -36,6 +36,8 @@
 import { ref } from "vue";
 
 export default {
+  name: "DropdownComponent",
+
   props: {
     Heading: String,
     content: Array,

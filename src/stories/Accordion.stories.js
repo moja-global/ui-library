@@ -1,5 +1,5 @@
-import AccordionComponent from "../components/Accordion/AccordionComponent.vue";
-import AccordionItem from "../components/Accordion/AccordionItem.vue";
+import AccordionComponent from "../../mojaglobal-ui/src/components/Accordion/AccordionComponent.vue";
+import AccordionItem from "../../mojaglobal-ui/src/components/Accordion/AccordionItem.vue";
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
