@@ -1,5 +1,5 @@
 {
-  "name": "@mojaglobal/mojaglobal-ui",
+  "name": "@moja-global/mojaglobal-ui",
   "version": "0.1.0",
   "description": "Elegant design system & Vue.js 3 UI library for moja global",
   "main": "dist/mojaglobal-ui.ssr.js",
