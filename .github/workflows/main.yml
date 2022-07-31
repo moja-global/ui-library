@@ -3,9 +3,6 @@ on:
   push:
     tags:
       - v*
-  pull_request:
-    branches:
-      - main
 
 jobs:
   publish:
@@ -20,6 +17,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
          node-version: '14.x'
+         registry-url: 'https://registry.npmjs.org'
+         scope: '@moja-global'
 
       - name: Install dependencies
         run: |
@@ -31,3 +30,10 @@ jobs:
         run: |
           cd mojaglobal-ui
           yarn build
+
+      - name: Publish the UI-library
+        run: |
+          cd mojaglobal-ui
+          yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
