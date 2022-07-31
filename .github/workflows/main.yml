@@ -1,0 +1,33 @@
+name: Continuous Delivery
+on:
+  push:
+    tags:
+      - v*
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  publish:
+    name: Publish to NPM registry
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js for NPM
+        uses: actions/setup-node@v1
+        with:
+         node-version: '14.x'
+
+      - name: Install dependencies
+        run: |
+          yarn
+          cd mojaglobal-ui
+          yarn
+
+      - name: Build the UI-library
+        run: |
+          cd mojaglobal-ui
+          yarn build
