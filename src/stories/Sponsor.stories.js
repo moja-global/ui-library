@@ -1,4 +1,4 @@
-import Sponsors from "../components/Sponsors/SponsorsComponent.vue";
+import Sponsors from "../../mojaglobal-ui/src/components/Sponsors/SponsorsComponent.vue";
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {

@@ -1,4 +1,4 @@
-import Dropdown from "../components/Dropdown/DropdownComponent.vue";
+import Dropdown from "../../mojaglobal-ui/src/components/Dropdown/DropdownComponent.vue";
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
