@@ -1,6 +1,6 @@
 <template>
   <label class="togglebox">
-    <input type="checkbox" />
+    <input type="checkbox" @click="InputChange" />
     <span :class="classname"></span>
   </label>
 </template>
@@ -34,6 +34,14 @@ export default {
       type: String,
       default: "#73e8a3",
     },
+  },
+  setup(props, { emit }) {
+    function InputChange(e) {
+      emit("clicked", e.target.checked);
+    }
+    return {
+      InputChange,
+    };
   },
 };
 </script>
