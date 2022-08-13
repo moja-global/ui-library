@@ -33,11 +33,9 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 
 export default {
-  name: "DropdownComponent",
-
   props: {
     Heading: String,
     content: Array,
@@ -88,10 +86,12 @@ export default {
       console.log(isVisible.value);
     }
     function click() {
-      window.open(
-        this.$refs.dropdown.children[this.focusedIndex].href,
-        "_self"
-      );
+      onMounted(() => {
+        window.open(
+          this.$refs.dropdown.children[this.focusedIndex].href,
+          "_self"
+        );
+      });
     }
 
     return {

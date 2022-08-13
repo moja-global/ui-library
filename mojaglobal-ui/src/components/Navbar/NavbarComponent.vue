@@ -58,7 +58,7 @@
 <script>
 import { ref } from "vue";
 export default {
-  name: "Navbar",
+  name: "NavbarComponent",
   props: {
     imageSrc: String,
     imageAlt: String,
@@ -146,12 +146,14 @@ a {
   padding: 0px 34px;
 }
 .content_mobile {
-  display: none;
+  left: -1500px;
+  flex-direction: column;
+  transition: 0.8s ease-out;
+  position: absolute;
   font-size: v-bind(fontSize);
   background-color: v-bind(bgColor);
   color: v-bind(color);
   width: 100%;
-  transition: 2s;
   z-index: -1;
 }
 .show {
@@ -163,7 +165,6 @@ a {
   flex-direction: row;
   padding-left: 0;
   list-style: none;
-  transition: 1s linear;
   margin: auto;
   align-items: center;
 }
@@ -192,9 +193,7 @@ a {
   }
   .show {
     display: flex;
-    flex-direction: column;
     left: 0px;
-    transition: 2s;
   }
 }
 </style>
