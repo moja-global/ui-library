@@ -54,11 +54,11 @@ export default {
       type: String,
       default: "7px",
     },
-    InnerColor: {
+    PrimaryColor: {
       type: String,
       default: "#2E382B",
     },
-    FillColor: {
+    ActiveBarColor: {
       type: String,
       default: "#2E382B",
     },
@@ -66,7 +66,7 @@ export default {
       type: String,
       default: "#ffeb3b",
     },
-    TrackColor: {
+    BarColor: {
       type: String,
       default: "#73E8A3",
     },
@@ -116,7 +116,7 @@ export default {
   width: 100%;
   height: v-bind(TrackHeight);
   border-radius: 28px;
-  background: v-bind(TrackColor);
+  background: v-bind(BarColor);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -126,7 +126,7 @@ export default {
   width: v-bind(leftpos);
   height: 100%;
   border-radius: 28px;
-  background: v-bind(FillColor);
+  background: v-bind(ActiveBarColor);
 }
 
 .thumb {
@@ -142,6 +142,7 @@ export default {
 }
 .primary {
   width: v-bind(OuterWidth);
-  accent-color: v-bind(InnerColor);
+  accent-color: v-bind(PrimaryColor);
+  cursor: pointer;
 }
 </style>
