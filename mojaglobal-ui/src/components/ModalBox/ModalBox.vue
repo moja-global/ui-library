@@ -1,5 +1,6 @@
 <template>
-    <div class="box-wrapper box-alert-mask" @click="toggle">
+    <div class="box-wrapper box-alert-mask modal-common">
+        <div class="dark modal-common" @click="toggle"></div>
         <div class="box-alert-wrapper">
             <slot></slot>
         </div>
@@ -12,7 +13,7 @@
         components: {
         },
         props: {
-            toggle: { type: Function ,required:true},
+            toggle: { type: Function,required: true },
         }
     }
 
@@ -20,20 +21,27 @@
 
 <style scoped>
     .box-wrapper {
+        z-index: 1;
+    }
+
+    .modal-common {
         width: 100%;
         height: 100%;
         min-height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content:center
+        justify-content: center;
     }
 
-    
+    .dark {
+        z-index: -1;
+        position: fixed;
+        cursor: pointer;
+    }
 
     .box-alert-mask {
         position: fixed;
-        z-index: 9999;
         top: 0;
         left: 0;
         width: 100%;
