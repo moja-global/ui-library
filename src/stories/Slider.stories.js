@@ -22,7 +22,7 @@ export const Primary = () => ({
     };
   },
   template:
-    '  <Slider classname="primary" InnerColor="#2E382B" OuterWidth="356px" OuterHeight="7px" InnerWidth="16px" InnerHeight="16px" minimum="0" maximum="100" value="22" @clicked="getvalue"/> <br> <p> Value: {{ title }}</p>',
+    '  <Slider classname="primary" PrimaryColor="#2E382B" OuterWidth="356px" OuterHeight="7px" InnerWidth="16px" InnerHeight="16px" minimum="0" maximum="100" value="22" @clicked="getvalue"/> <br> <p> Value: {{ title }}</p>',
 });
 
 export const Secondary = () => ({
@@ -40,5 +40,5 @@ export const Secondary = () => ({
     };
   },
   template:
-    '  <Slider classname="secondary" OuterColor="#73E8A3" InnerColor="#2E382B" OuterWidth="356px" OuterHeight="7px" InnerWidth="16px" InnerHeight="16px" minimum="0" maximum="100" value="22"  @clicked="getvalue"/> <br> <p> Value: {{ title }}</p>',
+    '  <Slider classname="secondary" OuterColor="#73E8A3" PrimaryColor="#2E382B" OuterWidth="356px" OuterHeight="7px" InnerWidth="16px" InnerHeight="16px" minimum="0" maximum="100" value="22"  @clicked="getvalue"/> <br> <p> Value: {{ title }}</p>',
 });
