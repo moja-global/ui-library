@@ -8,8 +8,8 @@
  [npm](https://www.npmjs.com/package/@moja-global/mojaglobal-ui)   [yarn](https://yarnpkg.com/package/@moja-global/mojaglobal-ui)
 ## About The Project
 
-It is an Elegant design system build on Vue.js version 3 for moja global. It is open-source UI library having pre-written code for various widely used components across all the repositories of moja global that developers and users can use in the projects just by installing the package and running import commands
-
+It is an Elegant design system built on Vue.js version 3 for moja global. It is open-source UI library having pre-written code for various widely used components across all the repositories of moja global that developers and users can use in the projects just by installing the package and running import commands
+ 
 ## Built with
 
 - [Vue.js](https://vuejs.org/) version 3
@@ -47,9 +47,9 @@ Please go through these contributing guidelines
  2. Add all the files related to the component in this directory.
 
 3. Export your component in `ui-library/mojaglobal-ui/src/components/index.js`
-
-4. Add story related to your component in storybook.
-
+ 
+4. Add a story related to your component in the storybook.
+ 
 5. Add about the component in Readme.md
 
  ### To add new feature or to resolve a bug in the component
