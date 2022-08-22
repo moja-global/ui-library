@@ -1,7 +1,7 @@
 import CardComponent from "../../mojaglobal-ui/src/components/Card/Card.vue";
 
 export default {
-  title: "Example/Card",
+  title: "Components/Card",
   component: CardComponent,
 };
 

@@ -5,7 +5,7 @@ import { useBoxAlert } from "../../mojaglobal-ui/src/components/ModalBox/BoxAler
 import { ref } from "vue";
 
 export default {
-  title: "Example/modal",
+  title: "Components/modal",
   component: ModalComponent,
 };
 

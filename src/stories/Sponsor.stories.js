@@ -2,7 +2,7 @@ import Sponsors from "../../mojaglobal-ui/src/components/Sponsors/SponsorsCompon
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: "Example/SponsorSection",
+  title: "Components/SponsorSection",
   components: { Sponsors },
 };
 

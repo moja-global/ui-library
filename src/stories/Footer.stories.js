@@ -2,7 +2,7 @@ import Footer from "../../mojaglobal-ui/src/components/Footer/FooterComponent.vu
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: "Example/Footer",
+  title: "Components/Footer",
   components: { Footer },
 };
 

@@ -2,7 +2,7 @@ import Dropdown from "../../mojaglobal-ui/src/components/Dropdown/DropdownCompon
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: "Example/Dropdown",
+  title: "Components/Dropdown",
   components: { Dropdown },
 };
 

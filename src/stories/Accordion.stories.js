@@ -3,7 +3,7 @@ import AccordionItem from "../../mojaglobal-ui/src/components/Accordion/Accordio
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: "Example/Accordion",
+  title: "Components/Accordion",
   components: { AccordionComponent, AccordionItem },
 };
 
