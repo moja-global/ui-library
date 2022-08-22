@@ -13,3 +13,6 @@ export { default as DropdownComponent } from "./Dropdown/DropdownComponent.vue";
 export { default as CardComponent } from "./Card/Card.vue";
 export { useToast } from "./Alert/Alert.js";
 export { default as ToastComponent } from "./Alert/Toast.vue";
+export { default as NavbarComponent } from "./Navbar/NavbarComponent.vue";
+export { default as ToggleComponent } from "./Toggle/ToggleComponent.vue";
+export { default as SliderComponent } from "./Slider/Slider.vue";
