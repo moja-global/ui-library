@@ -8,10 +8,8 @@
  
  </div>
 
-## About The Project
-
-It is an Elegant design system built on Vue.js version 3 for moja global. It is an open-source UI library having pre-written code for various widely used components across all the repositories of moja global that developers and users can use in the projects just by installing the package and running import commands
- 
+## About 
+  
 ## Built with
 
 - [Vue.js](https://vuejs.org/) version 3
@@ -33,20 +31,22 @@ yarn add @moja-global/mojaglobal-ui
 
 ## Components 
 
-- Accordion
-- Alert
-- Button
-- Card
-- Datepicker
-- Dropdown
-- Footer
-- Modal
-- Navbar
-- Slider 
-- Sponsor
-- Toggle
-
-Detailed description about each of the component and how to use the component can be found  [here](https://ui-library-au5vxcs10-moja-global.vercel.app/?path=/story/example-accordion--primary)
+| Components | Planned | Implemented |
+|------------|---------|------------ |
+| Accordion  | ✔       |         ✔  |
+| Alert      | ✔       |         ✔  |
+| Button     | ✔       |         ✔  |
+| Card       | ✔       |         ✔  | 
+| Datepicker | ✔       |         ✔  |
+| Dropdown   | ✔       |         ✔  |
+| Footer     | ✔       |         ✔  | 
+| Modal      | ✔       |         ✔  |
+| Navbar     | ✔       |         ✔  |
+| Slider     | ✔       |         ✔  |
+| Sponsor    | ✔       |         ✔  | 
+| Toggle     | ✔       |         ✔  |
+ 
+Find detailed description on our [Storybook setup](https://ui-library-au5vxcs10-moja-global.vercel.app/?path=/story/example-accordion--primary)
 
 
 
