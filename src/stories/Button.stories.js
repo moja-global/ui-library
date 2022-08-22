@@ -2,7 +2,7 @@ import ButtonComponent from "../../mojaglobal-ui/src/components/Button/ButtonCom
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: "Example/Button",
+  title: "Components/Button",
   components: { ButtonComponent },
 };
 

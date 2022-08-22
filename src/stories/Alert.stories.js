@@ -6,7 +6,7 @@ import { useToast } from "../../mojaglobal-ui/src/components/Alert/Alert.js";
 app.use(store);
 
 export default {
-  title: "Example/Alert",
+  title: "Components/Alert",
   component: ToastComponent,
 };
 
