@@ -31,7 +31,7 @@ export default {
 }
 
 .earth_green_circular {
-  background-color: #475447;
+  background-color: #34A56F;
   color: white;
 }
 
