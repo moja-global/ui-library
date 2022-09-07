@@ -1,6 +1,6 @@
 {
   "name": "@moja-global/mojaglobal-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Elegant design system & Vue.js 3 UI library for moja global",
   "main": "dist/mojaglobal-ui.ssr.js",
   "browser": "dist/mojaglobal-ui.esm.js",
