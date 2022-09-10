@@ -40,7 +40,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .box-alert-wrapper {
   display: table-cell;
   vertical-align: middle;
