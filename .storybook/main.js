@@ -7,6 +7,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
   ],
+  staticDirs: ['../public'],
   framework: "@storybook/vue3",
   core: {
     builder: "@storybook/builder-webpack5",
