@@ -23,7 +23,7 @@ In the storybook (while not using a build step), the component is defined as a p
 Here, the template is inlined as a JavaScript string , which Vue compiles on the fly. Multiple footer components (Primary and Secondary) are exported from `Footer.stories.js`, therefore named exports are used to do the same, hence the syntax.
 You can also define a single component and export it as the default export. In the above case, we can see that this component is customized to cater to moja global's requirement. 
 
-While using a build step, we typically define each Vue component in a dedicated `.vue` file. For this, we can take a look at `FooterComponent.vue` file present in `@moja-global/mojaglobal-ui`
+While using a build step, we typically define each Vue component in a dedicated `.vue` file. For this, we can take a look at [FooterComponent.vue](https://github.com/moja-global/ui-library/blob/main/src/stories/Footer.stories.js) file present in `@moja-global/mojaglobal-ui` as an example.
 
 ```js
 <template> 
@@ -167,159 +167,6 @@ While using a build step, we typically define each Vue component in a dedicated 
    }, 
  }; 
  </script> 
-  
- <style scoped> 
- .footercontainer { 
-   background-color: v-bind(bgColor); 
-   color: v-bind(Color); 
-   font-size: v-bind(fontSize); 
-   padding: 2%; 
- } 
- .logo { 
-   display: flex; 
-   justify-content: center; 
- } 
- .logosecondary { 
-   display: flex; 
-   align-items: center; 
-   justify-content: center; 
-   width: 40%; 
-   margin-right: 10%; 
- } 
- .logo img, 
- .logosecondary img { 
-   height: v-bind(imgHeight); 
-   width: v-bind(imgWidth); 
- } 
- .upper { 
-   display: flex; 
-   flex-wrap: wrap-reverse; 
-   justify-content: space-evenly; 
-   padding: 0 2%; 
- } 
- .upperright { 
-   display: flex; 
-   flex-wrap: wrap; 
-   justify-content: space-evenly; 
-   padding: 0 2%; 
-   width: 66%; 
- } 
- .content { 
-   padding: 2%; 
- } 
- .title { 
-   font-size: v-bind(titlefontSize); 
-   font-weight: v-bind(titlefontWeight); 
-   color: v-bind(titlefontColor); 
-   height: fit-content; 
-   margin-bottom: 1%; 
- } 
- ul { 
-   list-style: none; 
-   margin-top: 10%; 
-   padding-left: 0; 
- } 
- a { 
-   color: v-bind(Color); 
-   text-decoration: none; 
-   font-weight: lighter; 
- } 
-  
- a:hover { 
-   color: v-bind(titlefontColor); 
- } 
-  
- .socialicons { 
-   display: flex; 
-   flex-wrap: wrap; 
-   justify-content: space-evenly; 
-   margin-top: 1px; 
-   width: fit-content; 
-   margin-bottom: 0px; 
- } 
- .socialmedia { 
-   display: flex; 
-   flex-wrap: wrap; 
-   flex-direction: column; 
-   justify-content: flex-start; 
-   padding: 2% 0%; 
- } 
- .socialmedia li, 
- socialmediasecondary li { 
-   margin-right: 5px; 
-   list-style: none; 
- } 
- .socialmediasecondary { 
-   display: flex; 
-   flex-wrap: wrap; 
-   flex-direction: column; 
-   justify-content: center; 
-   align-items: center; 
-   width: 40%; 
-   margin-left: 10%; 
- } 
- .lower { 
-   text-align: center; 
-   display: flex; 
-   justify-content: center; 
-   position: relative; 
-   margin: 6%; 
-   margin-bottom: 0%; 
- } 
- .lowersecondary { 
-   display: flex; 
-   flex-direction: row; 
-   flex-wrap: wrap-reverse; 
-   justify-content: space-around; 
-   margin-top: 2%; 
- } 
- .lowercontent { 
-   font-size: 16px; 
-   color: v-bind(titlefontColor); 
-   height: fit-content; 
-   position: absolute; 
-   bottom: 0px; 
- } 
- @media screen and (max-width: 1024px) { 
-   .content { 
-     margin: 1%; 
-   } 
-   .logo { 
-     width: 44%; 
-     margin: 1rem; 
-   } 
- } 
- @media screen and (max-width: 716px) { 
-   .title { 
-     text-align: center; 
-   } 
- } 
- @media screen and (max-width: 425px) { 
-   .logosecondary { 
-     width: 100%; 
-     margin: auto; 
-   } 
-   .socialmediasecondary { 
-     width: 100%; 
-     margin: 0%; 
-     margin-bottom: 6%; 
-   } 
-   .lowersecondary { 
-     margin: 0%; 
-   } 
-   .lower { 
-     margin: 10%; 
-     margin-bottom: 0%; 
-   } 
- } 
- @media screen and (min-width: 1024px) { 
-   .logo { 
-     width: 18%; 
-     margin-bottom: 2%; 
-     margin-top: 1rem; 
-   } 
- } 
- </style>
  ```
 
  The order of script and template tag are interchangeable. This is known as *Single-File Component* syntax.
@@ -515,11 +362,11 @@ While using a build step, we typically define each Vue component in a dedicated 
  </script>
  ```
 
- ## Learning more
+## Learning more
 
- Here are some resources to learn more about components and how to integrate them in your fresh new project:
+Here are some resources to learn more about components and how to integrate them in your fresh new project:
 
  - https://vuejs.org/guide/components/props.html
  - https://github.com/Palaksharma23/mojaglobal-ui
  
- For more information, checkout the documentation for each component in the Storybook setup.
+For more information, checkout the documentation for each component in the Storybook setup.
