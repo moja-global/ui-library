@@ -22,7 +22,7 @@ In the storybook (while not using a build step), the component is defined as a p
 ```
 
 Here, the template is inlined as a JavaScript string , which Vue compiles on the fly. Multiple footer components (Primary and Secondary) are exported from `Footer.stories.js`, therefore named exports are used to do the same, hence the syntax.
-You can also define a single component and export it as the default export. In the above case, we can see that this component is customized to cater to moja global's requirement. 
+You can also define a single component and export it as the default export. In the above case, we can see that this component is customized to cater to Moja global's requirement. 
 
 While using a build step, we typically define each Vue component in a dedicated `.vue` file. For this, we can take a look at [FooterComponent.vue](https://github.com/moja-global/ui-library/blob/main/src/stories/Footer.stories.js) file present in `@moja-global/mojaglobal-ui` as an example.
 The order of script and template tag are interchangeable. This is known as *Single-File Component* syntax.
