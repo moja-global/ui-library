@@ -4,28 +4,25 @@ import { Meta } from '@storybook/addon-docs';
 
 # Contribution Guidelines
 
-moja global welcomes contributions to the community through various projects that you can find on [here](https://github.com/moja-global). If you want to contribute a new component to the library, please follow the steps given below:
+Moja global welcomes contributions to the community through various projects that you can find on [GitHub](https://github.com/moja-global). If you want to contribute a new component to the library, please follow the steps given below:
 
-## Adding new Components
+1. Replace COMPONENT_NAME with your own component name
 
-1. Replace component_name with your own component name
- 
  ```sh
  cd mojaglobal-ui
- mkdir component_name
- cd component_name
+ mkdir COMPONENT_NAME
+ cd COMPONENT_NAME
  ```
-2. Follow the steps to get started provided in the "[Getting Started](?path=/docs/getting-started--page)" Page to define your own component and related story.
 
-3. Add all the files related to the component in this directory.
+2. Follow the steps provided in the "[Getting Started](?path=/docs/getting-started--page)" page to define your own component and its corresponding story.
+
+3. Add all the files related to the component in the component directory.
 
 4. Export your component in `ui-library/mojaglobal-ui/src/components/index.js`.
 
 5. Add the corresponding story in the Storybook.
 
 6. Add the details for the component on the `README.md` file.
-
-## New Features, Bug fixes, Updation of Docs
 
 If you have an idea for a new feature, bug fix, or just want to update docs, please submit an issue or pull request.
 To add new features or fix bugs, open the corresponding file and do the required changes in the file as well as in its corresponding story.
