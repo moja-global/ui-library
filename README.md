@@ -6,16 +6,17 @@
   Repository for the UI library — A Vue.js user-interface library for moja global projects
   </p>
   <p align="center">
-    <a href="https://github.com/moja-global/ui-library" alt="GitHub contributors">
+    <a href="https://github.com/moja-global/ui-library/graphs/contributors" alt="GitHub contributors">
     <img src="https://img.shields.io/github/contributors/moja-global/ui-library.svg" /></a>
-    <a href="https://github.com/moja-global/ui-library" alt="GitHub issues by-label">
+    <a href="https://github.com/moja-global/ui-library/issues" alt="GitHub issues by-label">
     <img src="https://img.shields.io/github/issues/moja-global/ui-library" /></a>
     <a href="https://mojaglobal.slack.com/" alt="Slack">
     <img src="https://img.shields.io/badge/slack-join_chat-brightgreen.svg" /></a>
-    <a href="https://github.com/moja-global/ui-library" alt="Twitter Follow">
+    <a href="https://twitter.com/mojaglobal" alt="Twitter Follow">
     <img src="https://img.shields.io/twitter/follow/mojaglobal.svg?label=Follow&style=social" /></a>
-    <a href="https://github.com/moja-global/ui-library" alt="License">
+    <a href="https://github.com/moja-global/ui-library/blob/main/LICENSE" alt="License">
     <img src="https://img.shields.io/github/license/moja-global/ui-library.svg" /></a>
+    <a href="https://www.npmjs.com/package/@moja-global/mojaglobal-ui" alt="Npm package">
     <img src="https://badge.fury.io/js/@moja-global%2Fmojaglobal-ui.svg" /></a>
 </p>
 </div>
