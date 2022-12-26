@@ -1,0 +1,126 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Getting Started"/>
+
+
+# Getting Started with UI Library
+
+The UI Library is a Vue.js user-interface library for Moja global projects. Below is a detailed guide for you to understand what a component is, integrate it in your project and contribute to our project by creating your own component or by enhancing the existing ones.
+
+## Components
+
+Components allow us to split the UI into independent and reusable pieces, allowing us to think about each piece in isolation. Vue implements its own component model while letting us encapsulate custom component and logic inside each.
+
+#### Defining a Component
+
+In the storybook (while not using a build step), the component is defined as a plain JavaScript object containing Vue-specific options. Let us look at the below Storybook snippet for [Primary Footer Component](?path=/docs/components-footer--primary) as an example:
+
+```js
+  template:
+    '<Footer v-bind:content="content" v-bind:socials="socials" Heading="Footer" lowercontent="Copyright © 2022 moja global." logosrc="https://community.moja.global/img/logo-light.png" trigger="hover" color="white" Bgheading="#2f382a" Bgcontent="#475447" socialsheading="Follow Us On" :isPrimary="true"></Footer>',
+
+```
+
+Here, the template is inlined as a JavaScript string , which Vue compiles on the fly. Multiple footer components (Primary and Secondary) are exported from `Footer.stories.js`, therefore named exports are used to do the same, hence the syntax.
+You can also define a single component and export it as the default export. In the above case, we can see that this component is customized to cater to Moja global's requirement. 
+
+While using a build step, we typically define each Vue component in a dedicated `.vue` file. For this, we can take a look at [FooterComponent.vue](https://github.com/moja-global/ui-library/blob/main/src/stories/Footer.stories.js) file present in `@moja-global/mojaglobal-ui` as an example.
+The order of script and template tag are interchangeable. This is known as *Single-File Component* syntax.
+
+#### Using a Component
+
+To use a child component (containing customized content and logic), we need to import it in the parent component. 
+ 
+ ```js
+ <template>
+ </template>
+
+ <script>
+ import {FooterComponent } from '@moja-global/mojaglobal-ui'
+ </script>
+ ```
+ Assuming `FooterComponent.vue` as the file containing parent component which is placed in `@moja-global/mojaglobal-ui`, the component will be exposed as the file's default export. To expose the imported content to the template, we need to register it with `components` option.
+
+ ```js
+ <template> 
+   <FooterComponent 
+   ></FooterComponent> 
+ </template> 
+  
+ <script> 
+ import { FooterComponent } from '@moja-global/mojaglobal-ui' 
+  
+ export default { 
+   name: 'Footer', 
+   components: { 
+     FooterComponent 
+   }, 
+   setup() { 
+   } 
+ } 
+ </script> 
+  
+ <style scoped></style>
+ ```
+
+The component will be then available as a tag using the key it is registered under, i.e, `<FooterComponent></FooterComponent>`
+
+## Passing props
+
+Props are custom attributes you can register on a component.
+
+For example, in case of `DatePicker` component present in [Datepicker.vue file](https://github.com/moja-global/FLINT-UI/blob/master/flint.ui/src/components/Datepicker/Datepicker.vue), we can declare props in object syntax, wherein for each property in the object declaration syntax, the key is the name of the prop, while the value should be the constructor function of the expected type.
+ 
+ ```js
+ <script> 
+ import { DatePickerComponent } from '@moja-global/mojaglobal-ui' 
+ import dayjs from 'dayjs' 
+ import { ref, computed } from 'vue' 
+  
+ export default { 
+   components: { 
+     DatePickerComponent 
+   }, 
+   props: { 
+     value: { type: String, default: dayjs('2022-01-31') } 
+   }, 
+   setup(props) { 
+     const selectedDate = ref(props.value) 
+  
+     const inputVal = computed({ 
+       get: () => { 
+         return selectedDate.value 
+       }, 
+       set: (val) => { 
+         // this.$emit('input', dayjs(val).toString()) 
+         selectedDate.value = val 
+       } 
+     }) 
+  
+     function onChange(val) { 
+       selectedDate.value = val 
+     } 
+  
+     function styles() { 
+       return { maxWidth: '250px' } 
+     } 
+  
+     return { 
+       selectedDate, 
+       inputVal, 
+       onChange, 
+       styles 
+     } 
+   } 
+ } 
+ </script>
+ ```
+
+## Learning more
+
+Here are some resources to learn more about components and how to integrate them in your fresh new project:
+
+ - [Vue.js Guide](https://vuejs.org/guide/components/props.html)
+ - [Demo project using Moja global's UI Library](https://github.com/Palaksharma23/mojaglobal-ui)
+ 
+For more information, checkout the documentation for each component in the Storybook setup.
